@@ -33,7 +33,7 @@ You can copy the ProgressWheel.java (in the library module) and the attrs.xml co
 You can create your own progress wheel in xml like this (remeber to add ```xmlns:wheel="http://schemas.android.com/apk/res-auto"```):
 
 ```xml
-<com.materialprogress.materialprogress.ProgressWheel
+<com.materialprogress.mylibrary.ProgressWheel
         android:id="@+id/progress_wheel"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -77,7 +77,7 @@ You can change other wheel properties such as the progress bar color, the wheel'
 In case you want the spinning wheel to fill the whole layout instead of having a fixed size, you can use ```matProg_fillRadius```.
 
 ```xml
-<com.materialprogress.materialprogress.ProgressWheel
+<com.materialprogress.mylibrary.ProgressWheel
         android:id="@+id/progress_wheel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
