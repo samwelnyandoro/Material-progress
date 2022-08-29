@@ -26,7 +26,7 @@ You can also have a linear determinate progress mode if you don't like the anima
 
 You can copy the ProgressWheel.java (in the library module) and the attrs.xml content into your project. Or you can get the binaries from Maven central by adding in your build.gradle dependencies:
 
-```implementation 'com.samwelnyandoro:Material-progress:1.1.0'```
+```implementation 'com.github.samwelnyandoro:Material-progress:1.1.0'```
 
 ## Usage
 
@@ -107,13 +107,7 @@ In the xml definition, besides the ```fillRadius``` property, you can set:
 
 ## Versions
 
-* 1.0 Initial release
-* 1.1 The default speed is closer to the default progress wheel in Lollipop. Removed unused icons.
-* 1.2 Interpolated determinate progress, a new option to set a linear progress (which was the default before)
-* 1.3 Added a prefix to the attributes to avoid collisions, new callback called when the progress changes in the determinate wheel.
-* 1.4 Improved callback, now receives a value which is rounded to two decimals
-* 1.5 Callback is called with a value of -1.0f in the indeterminate wheel every time the animation cycle finishes, updated Gradle and support libraries
-* 1.7 Animations are disabled when the system preferences have disabled animations
+* 1.1.0 Initial release
 
 License
 -------
