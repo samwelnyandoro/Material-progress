@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.materialprogress.mylibrary.ProgressWheel;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private ProgressWheel progressWheel;
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 progressWheelInterpolated.setProgress(0.0f);
                             }
 
-                            interpolatedValue.setText(String.format("%.2f", progress));
+                            interpolatedValue.setText(String.format(Locale.getDefault(), "%.2f", progress));
                         });
 
                         progressWheelLinear.setCallback(progress -> {
@@ -71,8 +73,7 @@ public class MainActivity extends AppCompatActivity {
                             } else if(progress == 1.0f) {
                                 progressWheelLinear.setProgress(0.0f);
                             }
-
-                            linearValue.setText(String.format("%.2f", progress));
+                            linearValue.setText(String.format(Locale.getDefault(), "%.2f", progress));
                         });
                         break;
                     case 1:
@@ -165,9 +166,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setProgress(float progress) {
-        progressWheelLinear.setCallback(progress1 -> linearValue.setText(String.format("%.2f", progress1)));
-        progressWheelInterpolated.setCallback(progress12 -> interpolatedValue.setText(String.format("%.2f", progress12)));
-
+        progressWheelLinear.setCallback(progress1 -> {
+            String formattedProgress = String.format(Locale.getDefault(), "%.2f", progress1);
+            linearValue.setText(formattedProgress);
+        });
+        progressWheelInterpolated.setCallback(progress12 -> {
+            String formattedProgress = String.format(Locale.getDefault(), "%.2f", progress12);
+            interpolatedValue.setText(formattedProgress);
+        });
         progressWheelLinear.setProgress(progress);
         progressWheelInterpolated.setProgress(progress);
     }
@@ -185,9 +191,6 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-
-
         return super.onOptionsItemSelected(item);
     }
 }
