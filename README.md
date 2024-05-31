@@ -28,13 +28,16 @@ You can copy the ProgressWheel.java (in the library module) and the attrs.xml co
 
 ## Add this to your build.gradle(project) or settings.gradle(Project Settings)
 
-```mavenCentral()```
-			
-   ```maven { url 'https://jitpack.io' }```
+```settings.gradle
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
+```
 
 ## Add this to your build.gradle(module:app)
 
-```implementation 'com.github.samwelnyandoro:Material-progress:1.1.0'```
+```buidl.gradle(module:app)
+implementation 'com.github.samwelnyandoro:Material-progress:1.1.0'
+```
 
 ## Usage
 
