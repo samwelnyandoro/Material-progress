@@ -1,6 +1,6 @@
 # Material Progress
 
-A material style progress wheel compatible with 2.3
+A material style progress wheel compatible with 1.1.0
 
 Try the demo app on Google Play:
 
@@ -26,11 +26,22 @@ You can also have a linear determinate progress mode if you don't like the anima
 
 You can copy the ProgressWheel.java (in the library module) and the attrs.xml content into your project. Or you can get the binaries from Maven central by adding in your build.gradle dependencies:
 
-```implementation 'com.github.samwelnyandoro:Material-progress:1.1.1'```
+## Add this to your build.gradle(project) or settings.gradle(Project Settings)
+
+```settings.gradle
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
+```
+
+## Add this to your build.gradle(module:app)
+
+```buidl.gradle(module:app)
+implementation 'com.github.samwelnyandoro:Material-progress:1.1.0'
+```
 
 ## Usage
 
-You can create your own progress wheel in xml like this (remeber to add ```xmlns:wheel="http://schemas.android.com/apk/res-auto"```):
+You can create your own progress wheel in xml like this (remember to add ```xmlns:wheel="http://schemas.android.com/apk/res-auto"```):
 
 ```xml
 <com.materialprogress.mylibrary.ProgressWheel
